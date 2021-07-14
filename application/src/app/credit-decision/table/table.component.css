@@ -110,15 +110,13 @@ tr:hover {
   width: 30%;
   height: 40%;
   bottom: 0;
-  border: 0px solid;
   background-color: #F5F5F5;
   z-index: 50;
   visibility: hidden;
   opacity: 0;
   box-shadow: 4px 3px 5px 1px #969696;
-  left: 230px;
   overflow: hidden;
-  top: 80px;
+
   transition: 0.30s ease-in-out;
 }
 .popup1-inner{
@@ -180,6 +178,9 @@ tr:hover {
 }
 a{
   text-decoration: none;
+}
+a:hover{
+  background-color: transparent;
 }
 .icon-button__badge {
   position: absolute;
