@@ -28,6 +28,7 @@ export class TableComponent implements OnInit {
   result: any;
   DecisionControl = new FormControl('', [Validators.required]);
   selected="";
+  showUp=false;
 
   constructor() { }
 
@@ -41,6 +42,7 @@ export class TableComponent implements OnInit {
       this.result ="verified_user";
       this.color="primary";
       this.selected="Approved As";
+      this.showUp=true;
     }else  if (  this.selectedValue == "approve-with"){
       this.result ="verified_user";
       this.color="primary";
