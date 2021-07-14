@@ -1,26 +1,3 @@
-/*mat-sidenav-container{*/
-/*  height: 100%;*/
-/*}*/
-
-.primarysidenav, .primarysidenav .mat-sidenav-content {
-  padding: 16px;
-}
-
-.primarysidenav {
-  background-color: #305C94;
-  width: 250px;
-  transition: all 0.3s linear;
-}
-
-.primary-sidenav-content.mat-drawer-content {
-  height: 100vh;
-}
-
-
-.primarysidenav ::ng-deep .mat-drawer-inner-container {
-  overflow: hidden;
-}
-
 .navbar-brand {
   padding-left: 50px;
   font-size: 26px;
@@ -35,7 +12,6 @@
   margin-left: 10px;
   background-color: #4D91E4;
 }
-
 
 .save {
   border-color: white;
@@ -55,11 +31,6 @@
 .bars {
   top: 5px;
   cursor: pointer;
-}
-
-.menuicon {
-  width: 30px;
-  text-align: center;
 }
 
 .eye, .print, .ellipsis {
@@ -82,6 +53,32 @@
   color: white;
   font-size: 20px;
 }
+
+.primarysidenav, .primarysidenav .mat-sidenav-content {
+  padding: 16px;
+}
+
+.primarysidenav {
+  background-color: #305C94;
+  width: 250px;
+  transition: all 0.3s linear;
+}
+
+.primary-sidenav-content.mat-drawer-content {
+  height: 100vh;
+}
+
+
+.primarysidenav ::ng-deep .mat-drawer-inner-container {
+  overflow: hidden;
+}
+
+
+.menuicon {
+  width: 30px;
+  text-align: center;
+}
+
 
 .sidenav1 {
   height: 100%;
