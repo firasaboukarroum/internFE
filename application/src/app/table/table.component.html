@@ -1,0 +1,240 @@
+
+<div class="container">
+  <table id="Table">
+    <thead >
+    <tr>
+      <th  *ngFor="let col of displayedColumns">
+      {{col}}
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container" style="text-align:left;">
+           Medium &Long Term Loan
+
+          <a href="#opendetail" style="float:right;color: dodgerblue;position: relative" mat-button>
+            <mat-icon class="icon-button">reorder</mat-icon>
+            <span class="icon-button__badge"></span>
+          </a>
+          <div class="popup1" id="opendetail">
+            <div class="popup1-inner">
+              <div class="popup1-text">
+                <h1>acsacacsaca</h1>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <span style="color: gray;font-size: 10px">USD - 10.5% Interest</span>
+        </div>
+
+
+      </td>
+      <td>200.000.00</td>
+      <td>34.934.00</td>
+      <td>300.000.00</td>
+      <td>300.000.00</td>
+      <td>
+         <span style="text-align:left;">
+           <ng-template #elseBlock>
+           <p style=" float: left;"> <mat-icon color="{{color}}" style="font-size: 15px;">{{result}}</mat-icon> {{selected}} </p>
+           </ng-template>
+               <mat-icon style="float:right;color: dodgerblue;font-size: 15px;">
+                <a href="" data-toggle="modal" data-target="#createmodal"  mat-button>
+                  <mat-icon>more_horiz</mat-icon>
+               </a>
+              </mat-icon>
+
+              <mat-icon style="float:right;color: dodgerblue;font-size: 15px;">
+                <a href="" data-toggle="modal" data-target="#createmodal"   mat-button>
+                  <mat-icon>all_inclusive</mat-icon>
+               </a>
+              </mat-icon>
+           <ng-container *ngIf="selected == '';else elseBlock">
+             <mat-form-field >
+                <mat-label class="un">Select Decision</mat-label>
+                  <mat-select  [(ngModel)]="selectedValue" name="decision" class="un" (selectionChange)="OnChange()">
+                    <mat-option *ngFor="let d of decisions" [value]="d.value">
+                      {{d.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                <mat-error *ngIf="DecisionControl.hasError('required')" style="color: lightgray;font-size: 10px">Does not Required Decision</mat-error>
+              </mat-form-field>
+           </ng-container>
+        </span>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="container" style="text-align:left;">
+          Medium &Long Term Loan
+          <a href="#p" style="float:right;color: dodgerblue;position: relative;" mat-button>
+            <mat-icon class="icon-button">reorder</mat-icon>
+            <span class="icon-button__badge"></span>
+          </a>
+          <div class="popup1" id="p" >
+            <div class="popup1-inner">
+              <div class="popup1-text">
+                <h1>acsacacsaca</h1>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <span style="color: gray;font-size: 10px">USD - 10.5% Interest</span>
+        </div>
+      </td>
+      <td >200.000.00</td>
+      <td>34.934.00</td>
+      <td >300.000.00</td>
+      <td>300.000.00</td>
+      <td >
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style="text-align:left;">
+          Medium &Long Term Loan
+          <a href="#p" style="float:right;color: dodgerblue;position: relative;" mat-button>
+            <mat-icon class="icon-button">reorder</mat-icon>
+            <span class="icon-button__badge"></span>
+          </a>
+          <br/>
+          <span style="color: gray;font-size: 10px">USD - 10.5% Interest</span>
+        </p>
+      </td>
+      <td >200.000.00</td>
+      <td>34.934.00</td>
+      <td>300.000.00</td>
+      <td>300.000.00</td>
+      <td >
+
+      </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td style="text-align: right">
+       TOTAL DIRECT
+      </td>
+      <td >200.000.00</td>
+      <td>34.934.00</td>
+      <td  >300.000.00</td>
+      <td>300.000.00</td>
+      <td  >
+        <mat-icon style="color: green">arrow_upward</mat-icon>  <span style="color: gray">Decreased by 21.000.00</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        TOTAL INDIRECT
+      </td>
+      <td>200.000.00</td>
+      <td>34.934.00</td>
+      <td >300.000.00</td>
+      <td>300.000.00</td>
+      <td >
+        <mat-icon style="color: red">arrow_downward</mat-icon>  <span style="color: gray">Decreased by 21.000.00</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        TOTAL PSE
+      </td>
+      <td >200.000.00</td>
+      <td>34.934.00</td>
+      <td >300.000.00</td>
+      <td>300.000.00</td>
+      <td >
+        <mat-icon style="color: green">arrow_upward</mat-icon> <span style="color: gray">Decreased by 21.000.00</span>
+      </td>
+    </tr>
+    <tr >
+      <td style="text-align: right;font-weight: bold;">
+        TOTAL
+      </td>
+      <td   style="font-weight: bold;">200.000.00</td>
+      <td style="font-weight: bold;">34.934.00</td>
+      <td  style="font-weight: bold;">300.000.00</td>
+      <td style="font-weight: bold;">300.000.00</td>
+      <td >
+        <mat-icon style="color: red">arrow_downward</mat-icon>  <span style="color: gray">Decreased by 21.000.00</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        DEDUCTIBLE 100% CASH COLLATERAL
+      </td>
+      <td  >200.000.00</td>
+      <td>34.934.00</td>
+      <td >300.000.00</td>
+      <td>300.000.00</td>
+      <td  >
+        <mat-icon style="color: green">arrow_upward</mat-icon>  <span style="color: gray">Decreased by 21.000.00</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        NET EXPOSED DEDUCTIBLE 100% CASH CO.
+      </td>
+      <td >200.000.00</td>
+      <td>34.934.00</td>
+      <td >300.000.00</td>
+      <td>300.000.00</td>
+      <td >
+        <mat-icon style="color: red">arrow_downward</mat-icon>  <span style="color: gray">Decreased by 21.000.00</span>
+      </td>
+    </tr>
+    <tr>
+      <td  style="text-align: right" >
+        DEDUCTIBLE CASH COLLATERAL
+      </td>
+      <td  >200.000.00</td>
+      <td>34.934.00</td>
+      <td >300.000.00</td>
+      <td>300.000.00</td>
+      <td >
+        <mat-icon style="color: green">arrow_upward</mat-icon> <span style="color: gray">Decreased by 21.000.00</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="text-align: right">
+        NET EXPOSURE DED.CASH CO.
+      </td>
+      <td >200.000.00</td>
+      <td>34.934.00</td>
+      <td >300.000.00</td>
+      <td>300.000.00</td>
+      <td >
+        <mat-icon style="color: green">arrow_upward</mat-icon> <span style="color: gray">Decreased by 21.000.00</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">
+        RELATED ENTITIES
+      </td>
+      <td >200.000.00</td>
+      <td>34.934.00</td>
+      <td >300.000.00</td>
+      <td>300.000.00</td>
+      <td  >
+        <mat-icon style="color: red">arrow_downward</mat-icon><span style="color: gray">Decreased by 21.000.00</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: right;font-weight: bold;">
+        NET LOCAL GROUP EXPOSURE
+      </td>
+      <td  style="font-weight: bold;">200.000.00</td>
+      <td style="font-weight: bold;">34.934.00</td>
+      <td  style="font-weight: bold;">300.000.00</td>
+      <td style="font-weight: bold;">300.000.00</td>
+      <td>
+        <mat-icon style="color: red">arrow_downward</mat-icon> <span style="color: gray">Decreased by 21.000.00</span>
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>
