@@ -8,10 +8,16 @@ import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@a
 export class SideNavbarComponent implements OnInit {
   opened = false;
   state = true;
-  constructor() { }
+
+
+  constructor() {
+  }
 
   ngOnInit(): void {
 
   }
 
+  open(event:any) {
+    this.opened = event;
+  }
 }

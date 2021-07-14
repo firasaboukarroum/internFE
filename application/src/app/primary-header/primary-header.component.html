@@ -1,0 +1,33 @@
+<div class="col fluid d-flex flex-column p-0">
+  <nav id="topNav" class="navbar fixed-top navbar-dark primaryHeader"
+       [ngClass]="{'expanded': opened, 'collapsed': !opened}">
+    <div (click)="openclicked();"  class="openButton">
+      <i class="fas fa-chevron-circle-right" style="color: white; font-size: 24px"></i>
+    </div>
+
+    <a class="navbar-brand" href="#first">Credit Decision</a>
+    <div class="d-grid gap-4 d-md-flex justify-content-md-end headernav">
+      <i class="far fa-user-circle userprofile" style="color: #ACCBF4"></i>
+      <p>Vehement Capital Partners</p>
+      <p style="color: #ACCBF4">CA Reference:</p> CA-2019-0098
+      <p style="color: #ACCBF4">Created on:</p> 20/03/2019
+      <div class="bars">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <i class="fas fa-print print"></i>
+      <i class="far fa-eye eye"></i>
+      <i class="fas fa-ellipsis-h ellipsis"></i>
+      <button class="btn btn-primary me-md-2 submit" type="button">Submit</button>
+      <button class="btn btn-primary save" type="button">Save</button>
+      <button type="button" class="fas fa-times close" aria-label="Close"></button>
+
+    </div>
+  </nav>
+  <nav class="navbar fixed-top navbar-light bg-light header" [ngClass]="{'expanded': opened, 'collapsed': !opened}">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1"></span>
+    </div>
+  </nav>
+</div>

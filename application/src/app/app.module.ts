@@ -13,6 +13,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatOptionModule} from "@angular/material/core";
 import {FormsModule} from "@angular/forms";
+import { PrimaryHeaderComponent } from './primary-header/primary-header.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {FormsModule} from "@angular/forms";
     TableComponent,
     CreditDecisionComponent,
     SideNavbarComponent,
+    PrimaryHeaderComponent,
   ],
   imports: [
     BrowserModule,
