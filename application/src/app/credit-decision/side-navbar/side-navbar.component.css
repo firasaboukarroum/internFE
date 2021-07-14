@@ -122,7 +122,7 @@
   left: -9px;
 }
 
-a {
+.nav_link{
   color: white;
   font-size: 0.875rem;
 }

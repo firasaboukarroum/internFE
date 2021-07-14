@@ -40,6 +40,76 @@
   margin-top: 10px;
 }
 
+.eyedetail {
+  left: -141px;
+  height: 37px;
+}
+
+.dropdown-item {
+  color: #4D91E4;
+}
+
+.drop-bars {
+  display: inline-block;
+}
+
+.drop-header {
+  display: block;
+  color: #6E6E6E;
+}
+
+.drop-item {
+  color: #4D91E4;
+  text-decoration: none;
+}
+
+.drop-section {
+  display: inline-block;
+  width: 250px;
+  margin-left: 10px;
+}
+
+.vieweye {
+  color: #6E6E6E;
+  padding-top: 0px;
+}
+
+.vieweye:hover {
+  background-color: white;
+}
+
+hr.solid {
+  transform: rotate(270deg);
+  width: 176px;
+  position: absolute;
+  bottom: 88px;
+  left: 144px;
+}
+
+.bar-details {
+  width: 522px;
+  left: -507px;
+  top: 24px;
+}
+
+
+.ellipsisdetail {
+  left: -143px;
+}
+
+.ellipsisview {
+  color: #6E6E6E;
+}
+
+.ellipsisview:hover {
+  background-color: white;
+}
+
+.ellipsisdelete {
+  background-color: white;
+  color: #C70000;
+}
+
 .userprofile {
   position: relative;
   left: 15px;
