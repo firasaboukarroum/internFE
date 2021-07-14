@@ -1,0 +1,216 @@
+/*mat-sidenav-container{*/
+/*  height: 100%;*/
+/*}*/
+
+.primarysidenav, .primarysidenav .mat-sidenav-content {
+  padding: 16px;
+}
+
+.primarysidenav {
+  background-color: #305C94;
+  width: 250px;
+  transition: all 0.3s linear;
+}
+
+.primary-sidenav-content.mat-drawer-content {
+  height: 100vh;
+}
+
+
+.primarysidenav ::ng-deep .mat-drawer-inner-container {
+  overflow: hidden;
+}
+
+.navbar-brand {
+  padding-left: 50px;
+  font-size: 26px;
+  left: 103px;
+}
+
+.submit {
+  border-color: white;
+  border-radius: 20px;
+  width: 100px;
+  font-size: 15px;
+  margin-left: 10px;
+  background-color: #4D91E4;
+}
+
+.save {
+  border-color: white;
+  border-radius: 20px;
+  width: 100px;
+  font-size: 15px;
+  background-color: #4D91E4;
+}
+
+.headernav {
+  color: white;
+  position: absolute;
+  top: 80px;
+  left: 34px;
+}
+
+.bars {
+  top: 5px;
+  cursor: pointer;
+}
+
+.menuicon {
+  width: 30px;
+  text-align: center;
+}
+
+.eye, .print, .ellipsis {
+  color: white;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+.userprofile {
+  position: relative;
+  left: 15px;
+  top: 5px;
+}
+
+.close {
+  margin-right: 90px;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.sidenav1 {
+  height: 100%;
+}
+
+.header {
+  top: 112px;
+}
+
+.expanded.primaryHeader, .expanded.header, .expanded.Primaryopen {
+  margin-left: 250px !important;
+  transition: all 0.3s linear;
+}
+
+.collapsed.primaryHeader, .collapsed.header, .collapsed.Primaryopen {
+  margin-left: 70px !important;
+  transition: all 0.3s linear;
+}
+
+.primarysidenav.collapsed {
+  width: 70px;
+  transition: all 0.3s linear;
+}
+
+.expanded .openButton {
+  transform: scaleX(-1);
+  transition: all 0.3s linear;
+}
+
+.primaryHeader {
+  background-color: #4D91E4;
+  height: 112px;
+}
+
+.openButton {
+  cursor: pointer;
+  position: absolute;
+  left: -9px;
+}
+
+a {
+  color: white;
+  font-size: 0.875rem;
+}
+
+.nav_link:hover {
+  color: white;
+}
+
+.collapsed #nav-bar {
+  width: 85px;
+}
+
+.expanded #nav-bar {
+  width: 265px;
+}
+
+#nav-bar .nav_link:hover {
+  background-color: #4C8FE0;
+}
+
+.user {
+  color: white;
+  display: grid;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden
+}
+
+.l-navbar {
+  position: fixed;
+  height: 93vh;
+  padding: .5rem 1rem 0 0;
+  transition: .5s;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 5px;
+  height: 46px;
+  background-color: #4C8FE0;
+}
+
+.nav_link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 1rem;
+  padding: .9rem 0 .9rem 1.5rem;
+  position: relative;
+  margin-bottom: .5rem;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.openButton .fa-chevron-circle-right {
+  color: white;
+  font-size: 24px;
+  background: #4D91E4;
+  border-radius: 50%;
+}
+
+@media (min-width: 500px) {
+  .left {
+    position: fixed;
+  }
+
+  .fixed {
+    min-height: 100vh;
+    min-width: 40px;
+    max-width: 70px;
+  }
+
+  .col .fluid {
+    min-height: 100vh;
+  }
+
+  .flex-grow {
+    flex: 1;
+  }
+
+  .l-navbar {
+    left: 0;
+    padding: 2.3rem 1rem 0 0;
+  }
+}

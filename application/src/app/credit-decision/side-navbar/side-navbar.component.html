@@ -1,0 +1,80 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" [(opened)]="state" [ngClass]="{'expanded': opened, 'collapsed': !opened}"
+               class="primarysidenav" style="font-size: 26px; color:white;">
+    <div style="padding-top: 20px; padding-left: 13px;" [class.visibility-hidden]="!opened">bluering</div>
+
+    <div class="l-navbar" id="nav-bar">
+      <nav class="nav">
+        <div class="nav_list">
+          <a href="#dashboard" class="nav_link">
+            <div class="menuicon"><i class="fas fa-tachometer-alt"></i></div>
+            Dashboard</a>
+          <a href="#profiles" class="nav_link active">
+            <div class="menuicon"><i class="far fa-address-book"></i></div>
+              Profiles</a>
+          <a href="#entities" class="nav_link">
+            <div class="menuicon"><i class="fas fa-chess-pawn"></i></div>
+            Entites</a>
+          <a href="#groups" class="nav_link">
+            <div class="menuicon"><i class="fas fa-bezier-curve"></i></div>
+            Groups</a>
+          <a href="#mybasket" class="nav_link">
+            <div class="menuicon"><i class="far fa-list-alt"></i></div>
+            My basket</a>
+          <a href="#expectedcreditloss" class="nav_link">
+            <div class="menuicon"><i class="fas fa-percentage"></i></div>
+            Expected Credit Loss</a>
+          <a href="#reports" class="nav_link">
+            <div class="menuicon"><i class="far fa-file-alt"></i></div>
+            Reports</a>
+          <a href="#supportingdata" class="nav_link">
+            <div class="menuicon"><i class="fas fa-folder-plus"></i></div>
+            Supporting Data</a>
+          <a href="#copies" class="nav_link">
+            <div class="menuicon"><i class="far fa-copy"></i></div>
+            Copies</a>
+        </div>
+        <a href="#" class="user nav_link"><div class="menuicon"><i class="far fa-user"></i></div>User</a>
+      </nav>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="primary-sidenav-content Primaryopen"
+                       [ngClass]="{'expanded': opened, 'collapsed': !opened}"></mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- center content -->
+<div class="col fluid d-flex flex-column p-0">
+  <nav id="topNav" class="navbar fixed-top navbar-dark primaryHeader"
+       [ngClass]="{'expanded': opened, 'collapsed': !opened}">
+    <div (click)="opened = !opened" class="openButton">
+      <i class="fas fa-chevron-circle-right" style="color: white; font-size: 24px"></i>
+    </div>
+
+    <a class="navbar-brand" href="#first">Credit Decision</a>
+    <div class="d-grid gap-4 d-md-flex justify-content-md-end headernav">
+      <i class="far fa-user-circle userprofile" style="color: #ACCBF4"></i>
+      <p>Vehement Capital Partners</p>
+      <p style="color: #ACCBF4">CA Reference:</p> CA-2019-0098
+      <p style="color: #ACCBF4">Created on:</p> 20/03/2019
+      <div class="bars">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <i class="fas fa-print print"></i>
+      <i class="far fa-eye eye"></i>
+      <i class="fas fa-ellipsis-h ellipsis"></i>
+      <button class="btn btn-primary me-md-2 submit" type="button">Submit</button>
+      <button class="btn btn-primary save" type="button">Save</button>
+      <button type="button" class="fas fa-times close" aria-label="Close"></button>
+
+    </div>
+  </nav>
+  <nav class="navbar fixed-top navbar-light bg-light header" [ngClass]="{'expanded': opened, 'collapsed': !opened}">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1"></span>
+    </div>
+  </nav>
+</div>
+
+

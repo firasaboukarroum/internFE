@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'application';
+  opened = false;
   displayedColumns: string[] = ['Facility', 'Current Limit','Balance','Requested Amount','Approved Limit','Decision'];
 }
