@@ -1,0 +1,68 @@
+#Table {
+  font: normal normal normal 11px/12px Ubuntu;
+  border: 1px solid #E8E8E8;
+  border-radius: 3px 3px 0px 0px;
+  opacity: 1;
+  max-height: 250px;
+  width: 1100px;
+  box-shadow: 0px 3px 6px #00000029;
+}
+#Table thead{
+
+  font: normal normal normal 11px/12px Ubuntu;
+  border: 1px solid #E8E8E8;
+  border-radius: 3px 3px 0px 0px;
+  opacity: 1;
+  left: 107px;
+  max-height: 150px;
+  width: 1500px;
+  height: 30px;
+}
+
+#Table td, #Table th {
+  border: 1px solid #ddd;
+  padding-top: 15px;
+  text-align: center;
+  padding-bottom: 15px;
+  width: 13%;
+  font-weight:normal;
+}
+
+#Table th {
+  padding: 0px;
+  max-height: 3%;
+  background-color: #F5F5F5;
+  color: gray;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight:bold;
+}
+#Table .un{
+  color: dodgerblue;
+}
+
+tr:hover {
+  background-color:  #F5F5F5;
+}
+
+#Table tbody tr td {
+  top: 441px;
+  left: 107px;
+  height: 30px;
+  opacity: 1;
+  font-size: 11px;
+  padding: 2px;
+  color: gray;
+}
+
+#Table tr th:first-child
+{
+  padding:10px;
+  text-align: left;
+  width: 23%;
+}
+
+#Table tbody  tr:nth-child(4)
+{
+  font-weight: bold;
+}

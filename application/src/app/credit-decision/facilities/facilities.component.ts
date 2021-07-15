@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'app-credit-decision',
-  templateUrl: './credit-decision.component.html',
-  styleUrls: ['./credit-decision.component.css']
+  selector: 'app-facilities',
+  templateUrl: './facilities.component.html',
+  styleUrls: ['./facilities.component.css']
 })
-export class CreditDecisionComponent implements OnInit {
-  opened = false;
+export class FacilitiesComponent implements OnInit {
   displayedColumns: string[] = ['Facility', 'Current Limit','Balance','Requested Amount','Approved Limit','Decision'];
+  constructor() { }
+
   ngOnInit(): void {
   }
 
