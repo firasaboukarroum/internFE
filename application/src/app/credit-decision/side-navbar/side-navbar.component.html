@@ -39,7 +39,9 @@
     </div>
   </mat-sidenav>
   <mat-sidenav-content class="primary-sidenav-content Primaryopen"
-                       [ngClass]="{'expanded': opened, 'collapsed': !opened}"></mat-sidenav-content>
+                       [ngClass]="{'expanded': opened, 'collapsed': !opened}">
+
+  </mat-sidenav-content>
 </mat-sidenav-container>
 
 <app-primary-header  (openedclicked)="open($event)"></app-primary-header>

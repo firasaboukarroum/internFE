@@ -1,4 +1,6 @@
-<div class="container">
+
+
+<div class="container" style="margin:155px">
   <table id="Table">
     <thead>
     <tr>
@@ -10,23 +12,86 @@
       <td>
         <div class="container" style="text-align:left;">
           Medium &Long Term Loan
-          <div style="float:right;color: dodgerblue;position: relative" id="open">
-            <mat-icon class="icon-button">reorder</mat-icon>
+          <div style="float:right;color: dodgerblue;position: relative">
+            <mat-icon class="icon-button" (click)="click()">reorder</mat-icon>
             <span [ngClass]="{'icon-button__badge': showUp}"></span>
-            <div class="popup1">
+            <div *ngIf="open" class="popup1">
               <div class="popup1-inner">
                 <div class="popup1-text">
-                  <h1>acsacacsaca</h1>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="Commercial contractor" class="form-label">Economic Sector</label>
+                        <p id="Commercial contractor">Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label for="Variable" class="form-label">interest type</label>
+                        <p id="Variable">Variable</p>
+                      </div>
+                      <div class="mb-3">
+                        <label for="USD Beirut Reference Rate" class="form-label">Base rate</label>
+                        <p id="USD Beirut Reference Rate">USD Beirut Reference Rate</p>
+                      </div>
+                      <div class="mb-3">
+                        <label for="2.00" class="form-label">Spread + or - rate</label>
+                        <p id="2.00">Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label for="30/09/2019" class="form-label">Review date of variable interest</label>
+                        <p id="30/09/2019">30/09/2019</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p [ngClass]="{'mb-3 p backgroundColor': showUp}">Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">interest type</label>
+                        <p>Variable</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Base rate</label>
+                        <p>USD Beirut Reference Rate</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Spread + or - rate</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Review date of variable interest</label>
+                        <p>30/09/2019</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!--          <a href="#opendetail" style="float:right;color: dodgerblue;position: relative" >-->
-          <!--            <mat-icon class="icon-button">reorder</mat-icon>-->
-          <!--            <span [ngClass]="{'icon-button__badge': showUp}"></span>-->
-          <!--          </a>-->
-
           <br/>
           <span style="color: gray;font-size: 10px">USD - 10.5% Interest</span>
         </div>
@@ -36,49 +101,156 @@
       <td>300.000.00</td>
       <td>300.000.00</td>
       <td>
-         <span style="text-align:left;">
-           <ng-template #elseBlock>
-           <p style=" float: left;"> <mat-icon color="{{color}}" style="font-size: 15px;">{{result}}</mat-icon>
-             {{selected}} </p>
-           </ng-template>
-               <mat-icon style="float:right;color: dodgerblue;font-size: 15px;">
-                <a href="" data-toggle="modal" data-target="#createmodal">
-                  <mat-icon>more_horiz</mat-icon>
-               </a>
-              </mat-icon>
+        <!--    popup     -->
+        <div class="container" style="text-align:left;">
 
-              <mat-icon style="float:right;color: dodgerblue;font-size: 15px;">
-                <a href="" data-toggle="modal" data-target="#createmodal">
-                  <mat-icon>all_inclusive</mat-icon>
-               </a>
-              </mat-icon>
-           <ng-container *ngIf="selected == '';else elseBlock">
-             <mat-form-field>
-                <mat-label class="un">Select Decision</mat-label>
-                  <mat-select [(ngModel)]="selectedValue" name="decision" class="un" (selectionChange)="OnChange()">
-                    <mat-option *ngFor="let d of decisions" [value]="d.value">
-                      {{d.viewValue}}
-                    </mat-option>
-                  </mat-select>
-                <mat-error *ngIf="DecisionControl.hasError('required')" style="color: lightgray;font-size: 10px">Does not Required Decision</mat-error>
-              </mat-form-field>
-           </ng-container>
-        </span>
+          <!-- Select decision-->
+          <ng-template #elseBlock>
+            <p style=" float: left;">
+              <mat-icon color="{{color}}" style="font-size: 13px;">{{result}}</mat-icon>
+              {{selected}} </p>
+          </ng-template>
+          <ng-container *ngIf="selected == '';else elseBlock">
+            <mat-form-field>
+              <mat-label class="un">Select Decision</mat-label>
+              <mat-select [(ngModel)]="selectedValue" name="decision" class="un" (selectionChange)="OnChange()">
+                <mat-option *ngFor="let d of decisions" [value]="d.value">
+                  {{d.viewValue}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="DecisionControl.hasError('required')" style="color: lightgray;font-size: 10px">Does not
+                Required Decision
+              </mat-error>
+            </mat-form-field>
+          </ng-container>
+          <!--Icons-->
+          <div style="float:right;color: dodgerblue;position: relative;cursor: pointer">
+            <mat-icon (click)="clickop()">more_horiz</mat-icon>
+            <div *ngIf="op" class="popup2">
+              <div class="popup2-inner">
+                <div class="popup2-text">
+                  <div class="mb-3">
+                    <span class="but" (click)="newChange()">View Facility Application</span>
+                  </div>
+                  <div class="mb-3">
+                    <span class="but" (click)="newChange()">View Facility Decision</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="float:right;color: dodgerblue;position: relative;cursor: pointer">
+            <mat-icon (click)="clickop3()">all_inclusive</mat-icon>
+            <div *ngIf="op3" class="popup3">
+              <div class="popup3-inner">
+                <div class="popup3-text">
+                  <div class="mb-3">
 
+                    <span class="but" (click)="newChange()">View Facility Application</span>
+                  </div>
+                  <hr>
+                  <div class="mb-3">
+                    <span class="but" (click)="newChange()">View Facility Decision</span>
+                  </div>
+                  <hr>
+                  <div class="mb-3">
+                    <span class="but" (click)="newChange()">View Facility Application</span>
+                  </div>
+                  <hr>
+                  <div class="mb-3">
+                    <span class="but" (click)="newChange()">View Facility Decision</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--    end popup -->
       </td>
     </tr>
     <tr>
       <td>
         <div class="container" style="text-align:left;">
           Medium &Long Term Loan
-          <a href="#p" style="float:right;color: dodgerblue;position: relative;">
+          <div style="float:right;color: dodgerblue;position: relative">
             <mat-icon class="icon-button">reorder</mat-icon>
-
-          </a>
-          <div class="popup1" id="p">
-            <div class="popup1-inner">
-              <div class="popup1-text">
-                <h1>acsacacsaca</h1>
+            <span [ngClass]="{'icon-button__badge': showUp}"></span>
+            <div *ngIf="false" class="popup1">
+              <div class="popup1-inner">
+                <div class="popup1-text">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">interest type</label>
+                        <p>Variable</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Base rate</label>
+                        <p>USD Beirut Reference Rate</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Spread + or - rate</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Review date of variable interest</label>
+                        <p>30/09/2019</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p [ngClass]="{'mb-3 p backgroundColor': showUp}">Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">interest type</label>
+                        <p>Variable</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Base rate</label>
+                        <p>USD Beirut Reference Rate</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Spread + or - rate</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Review date of variable interest</label>
+                        <p>30/09/2019</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Economic Sector</label>
+                        <p>Commercial contractor</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -91,20 +263,75 @@
       <td>300.000.00</td>
       <td>300.000.00</td>
       <td>
+        <!--    popup     -->
+        <div class="container" style="text-align:left;">
 
+          <!-- Select decision-->
+          <ng-template #elseBlock>
+            <p style=" float: left;">
+              <mat-icon color="{{color}}" style="font-size: 15px;">{{result}}</mat-icon>
+              {{selected}} </p>
+          </ng-template>
+          <ng-container *ngIf="selected == '';else elseBlock">
+            <mat-form-field>
+              <mat-label class="un">Select Decision</mat-label>
+              <mat-select [(ngModel)]="selectedValue" name="decision" class="un" (selectionChange)="OnChange()">
+                <mat-option *ngFor="let d of decisions" [value]="d.value">
+                  {{d.viewValue}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="DecisionControl.hasError('required')" style="color: lightgray;font-size: 10px">Does not
+                Required Decision
+              </mat-error>
+            </mat-form-field>
+          </ng-container>
+          <!--Icons-->
+          <div style="float:right;color: dodgerblue;position: relative;cursor: pointer">
+            <mat-icon (click)="click1()">more_horiz</mat-icon>
+            <div *ngIf="open1" class="popup2">
+              <div class="popup2-inner">
+                <div class="popup2-text">
+                  <div class="mb-3">
+                    <span class="but" (click)="newChange()">View Facility Application</span>
+                  </div>
+                  <div class="mb-3">
+                    <span class="but" (click)="newChange()">View Facility Decision</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="float:right;color: dodgerblue;position: relative;cursor: pointer">
+            <mat-icon (click)="clickop1()">all_inclusive</mat-icon>
+            <div *ngIf="op4" class="popup3">
+              <div class="popup3-inner">
+                <div class="popup3-text">
+                  <div class="mb-3">
+                    <span class="but" >View Facility Application</span>
+                  </div>
+                  <hr>
+                  <div class="mb-3">
+                    <span class="but" >View Facility Decision</span>
+                  </div>
+                  <hr>
+                  <div class="mb-3">
+                    <span class="but" >View Facility Application</span>
+                  </div>
+                  <hr>
+                  <div class="mb-3">
+                    <span class="but">View Facility Decision</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--    end popup -->
       </td>
     </tr>
     <tr>
       <td>
-        <p style="text-align:left;">
-          Medium &Long Term Loan
-          <a href="#p" style="float:right;color: dodgerblue;position: relative;">
-            <mat-icon class="icon-button">reorder</mat-icon>
 
-          </a>
-          <br/>
-          <span style="color: gray;font-size: 10px">USD - 10.5% Interest</span>
-        </p>
       </td>
       <td>200.000.00</td>
       <td>34.934.00</td>
@@ -251,10 +478,3 @@
 
   </table>
 </div>
-<script>
-  $(document).ready(function () {
-    $('#open').click(function () {
-      $('.popup1').show();
-    });
-  });
-</script>

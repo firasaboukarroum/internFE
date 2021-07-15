@@ -1,5 +1,6 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 export interface Decision {
   value: string;
@@ -29,13 +30,44 @@ export class TableComponent implements OnInit {
   DecisionControl = new FormControl('', [Validators.required]);
   selected="";
   showUp=false;
-
-  constructor() { }
+  open=false;
+  open1=false;
+  op1=false;
+  op=false;
+  op3=false;
+  op4=false
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 
   }
-
+  click():any{
+    if (this.open==false){
+      this.open=true;
+      this.open1=false;
+    }else this.open=false;
+  }
+  click1():any{
+    if (this.open1==false){
+      this.open1 = true;
+    }else this.open1=false;
+  }
+  clickop1():any{
+    if (this.op4==false){
+      this.op4 = true;
+    }else this.op4=false;
+  }
+  clickop3():any{
+    if (this.op3==false){
+      this.op3 = true;
+    }else this.op3=false;
+  }
+  clickop():any{
+    if (this.op==false){
+      this.op=true;
+      this.open1=false;
+    }else this.op=false;
+  }
    OnChange():any{
 
     if (  this.selectedValue == "approve-as"){
@@ -61,5 +93,8 @@ export class TableComponent implements OnInit {
   ngAfterViewInit(){
 
   }
+  newChange(): void {
 
+    this.router.navigate(['/credit-decision']);
+  }
 }
