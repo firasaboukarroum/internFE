@@ -14,6 +14,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatOptionModule} from "@angular/material/core";
 import {FormsModule} from "@angular/forms";
 import { PrimaryHeaderComponent } from './primary-header/primary-header.component';
+import { SecondaryHeaderComponent } from './secondary-header/secondary-header.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { PrimaryHeaderComponent } from './primary-header/primary-header.componen
     CreditDecisionComponent,
     SideNavbarComponent,
     PrimaryHeaderComponent,
+    SecondaryHeaderComponent,
   ],
   imports: [
     BrowserModule,

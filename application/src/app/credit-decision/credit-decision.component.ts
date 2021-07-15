@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreditDecisionComponent implements OnInit {
   opened = false;
-
+  displayedColumns: string[] = ['Facility', 'Current Limit','Balance','Requested Amount','Approved Limit','Decision'];
   ngOnInit(): void {
   }
 
