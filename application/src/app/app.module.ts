@@ -19,6 +19,7 @@ import { FacilitiesComponent } from './credit-decision/facilities/facilities.com
 import { CovenantsComponent } from './credit-decision/covenants/covenants.component';
 import { SummaryComponent } from './credit-decision/summary/summary.component';
 import { RecommendationsComponent } from './credit-decision/recommendations/recommendations.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { RecommendationsComponent } from './credit-decision/recommendations/reco
     BrowserModule,
     AppRoutingModule,
     MatInputModule,
+    HttpClientModule,
     MatSelectModule,
     MatOptionModule,
     FormsModule,
