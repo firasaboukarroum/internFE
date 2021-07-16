@@ -1,0 +1,72 @@
+.secondary-header {
+  top: 112px;
+  margin-left: 70px;
+  padding-left: 47px;
+  border-bottom: 1px solid #D6D6D6;
+  padding-bottom: 0px;
+}
+
+.group-facility, .add-facility {
+  color: #20C36B;
+  margin-right: 70px;
+}
+
+.top-header:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #305C94;
+
+}
+
+.top-header {
+  margin-right: 60px;
+}
+
+
+.expanded.secondary-header, .expanded.header, .expanded.Primaryopen {
+  margin-left: 250px !important;
+  transition: all 0.3s linear;
+}
+
+.collapsed.secondary-header, .collapsed.header, .collapsed.Primaryopen {
+  margin-left: 70px !important;
+  transition: all 0.3s linear;
+}
+
+.collapsed #nav-bar {
+  width: 85px;
+}
+
+.expanded #nav-bar {
+  width: 265px;
+}
+
+
+.header {
+  top: 112px;
+}
+
+.expanded.primaryHeader, .expanded.header, .expanded.Primaryopen {
+  margin-left: 250px !important;
+  transition: all 0.3s linear;
+}
+
+.collapsed.primaryHeader, .collapsed.header, .collapsed.Primaryopen {
+  margin-left: 70px !important;
+  transition: all 0.3s linear;
+}
+
+
+.expanded .openButton {
+  transform: scaleX(-1);
+  transition: all 0.3s linear;
+}
+
+
+.collapsed #nav-bar {
+  width: 85px;
+}
+
+.expanded #nav-bar {
+  width: 265px;
+}
+

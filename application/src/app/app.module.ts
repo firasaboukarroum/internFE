@@ -20,6 +20,7 @@ import { CovenantsComponent } from './credit-decision/covenants/covenants.compon
 import { SummaryComponent } from './credit-decision/summary/summary.component';
 import { RecommendationsComponent } from './credit-decision/recommendations/recommendations.component';
 import {HttpClientModule} from "@angular/common/http";
+import { SecondaryHeaderComponent } from './secondary-header/secondary-header.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {HttpClientModule} from "@angular/common/http";
     CreditDecisionComponent,
     SideNavbarComponent,
     PrimaryHeaderComponent,
+    SecondaryHeaderComponent,
     SecuritiesComponent,
     FacilitiesComponent,
     CovenantsComponent,
@@ -40,7 +42,6 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     MatInputModule,
-    HttpClientModule,
     MatSelectModule,
     MatOptionModule,
     FormsModule,
