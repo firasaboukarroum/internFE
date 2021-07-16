@@ -114,10 +114,7 @@ tr:hover {
   height: 20px;
 }
 
-*{
-  margin: 0;
-  padding: 0  ;
-}
+
 .popup1{
   position: absolute;
   width: 563px;

@@ -163,11 +163,13 @@ hr.solid {
 .expanded.primaryHeader, .expanded.header, .expanded.Primaryopen {
   margin-left: 250px !important;
   transition: all 0.3s linear;
+  z-index: 1031;
 }
 
 .collapsed.primaryHeader, .collapsed.header, .collapsed.Primaryopen {
   margin-left: 70px !important;
   transition: all 0.3s linear;
+  z-index: 1031;
 }
 
 .primarysidenav.collapsed {
