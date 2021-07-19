@@ -47,9 +47,7 @@ export class TableComponent implements OnInit {
     }else this.open=false;
   }
   click1():any{
-    if (this.open1==false){
-      this.open1 = true;
-    }else this.open1=false;
+    this.open1 = !this.open1;
   }
   clickop1():any{
     if (this.op4==false){
@@ -57,9 +55,8 @@ export class TableComponent implements OnInit {
     }else this.op4=false;
   }
   clickop3():any{
-    if (this.op3==false){
-      this.op3 = true;
-    }else this.op3=false;
+    this.op3 = !this.op3;
+    console.log('tania');
   }
   clickop():any{
     if (this.op==false){

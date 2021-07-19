@@ -6,6 +6,8 @@
   opacity: 1;
   max-height: 250px;
   box-shadow: 0px 3px 6px #00000029;
+  color:#1B3454;
+
 }
 #Table thead{
 
@@ -15,6 +17,10 @@
   opacity: 1;
   max-height: 90px;
   width: 1229px;
+}
+
+.arrows{
+  font-style: italic;
 }
 
 
@@ -110,7 +116,7 @@ tr:hover {
   width: 1229px;
   background: #F8F8F8 0% 0% no-repeat padding-box;
   opacity: 1;
-  font-size: 11px;
+  font-size: 13px;
   padding: 2px;
   height: 20px;
 }
@@ -171,10 +177,10 @@ tr:hover {
   position: relative;
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 13px;
   justify-content: center;
-  width: 25px;
-  height: 25px;
+  width: 16px;
+  height: 16px;
   border: 1px solid cornflowerblue;
   outline: none;
   border-radius: 50%;
@@ -190,8 +196,8 @@ a{
   position: absolute;
   top: -5px;
   right: 0px;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   background: red;
   color: #ffffff;
   display: flex;
@@ -277,6 +283,10 @@ hr{
   padding: 7px;
   margin: 12px;
 
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
 }
 
 .but{
