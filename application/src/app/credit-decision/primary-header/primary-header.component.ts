@@ -19,6 +19,5 @@ export class PrimaryHeaderComponent implements OnInit {
   openclicked() {
     this.opened = !this.opened;
     this.openedclicked.emit(this.opened);
-
   }
 }

@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreditDecisionComponent implements OnInit {
   opened = false;
+  state = true;
   displayedColumns: string[] = ['Facility', 'Current Limit','Balance','Requested Amount','Approved Limit','Decision'];
   ngOnInit(): void {
+  }
+
+  openside(event:any) {
+    this.opened = event;
   }
 
 }

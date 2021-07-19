@@ -159,6 +159,9 @@ hr.solid {
 .header {
   top: 112px;
 }
+.action-buttons{
+  margin-right: -60px;
+}
 
 .expanded.primaryHeader, .expanded.header, .expanded.Primaryopen {
   margin-left: 250px !important;

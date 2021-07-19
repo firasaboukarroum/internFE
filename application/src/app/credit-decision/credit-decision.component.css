@@ -1,0 +1,26 @@
+.side-bar.expanded, .side-bar.expanded ::ng-deep .mat-drawer-container {
+  width: 250px;
+  display: inline-block;
+  transition: all 0.3s linear;
+}
+
+.side-bar.collapsed, .side-bar.collapsed ::ng-deep .mat-drawer-container {
+  width: 70px;
+  display: inline-block;
+  transition: all 0.3s linear;
+}
+
+.side-table.expanded {
+  display: inline-block;
+  width: calc(100% - 300px);
+  margin-bottom: 238px;
+  margin-left: 43px;
+  transition: all 0.3s linear;
+}
+.side-table.collapsed {
+  display: inline-block;
+  width: calc(100% - 120px);
+  margin-bottom: 238px;
+  margin-left: 43px;
+  transition: all 0.3s linear;
+}

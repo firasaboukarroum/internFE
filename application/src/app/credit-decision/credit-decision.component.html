@@ -1,6 +1,6 @@
-<div style="display: inline-block ; width: 70px">
-<app-side-navbar></app-side-navbar>
+<div [ngClass]="{'expanded': opened, 'collapsed': !opened}" class="side-bar">
+<app-side-navbar (openclicked)="openside($event)"></app-side-navbar>
 </div>
-<div style="display: inline-block ; width: 92% ; margin-bottom:238px ; margin-left: 43px">
+<div class="side-table" [ngClass]="{'expanded': opened, 'collapsed': !opened}">
 <app-table [displayedColumns]="displayedColumns"></app-table>
 </div>

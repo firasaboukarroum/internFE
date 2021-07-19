@@ -14,7 +14,6 @@ export interface Decision {
 })
 export class TableComponent implements OnInit {
 
-
   @Input() displayedColumns: any;
   @ViewChild('decision') private ngPartial: any;
   selectedValue!: string;
